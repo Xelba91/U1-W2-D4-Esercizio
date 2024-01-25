@@ -124,6 +124,20 @@ console.log(`Esercizio 7: Invertire ${myStr} RISULTATO:`, reverseString(myStr));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function upperFirst(str) {
+  let parole = str.split(" ");
+  let stringaFinale = [];
+  for (let i = 0; i < parole.length; i++) {
+    let primaLettera = parole[i].charAt(0);
+    let PrimaLetteraGrande = primaLettera.toUpperCase();
+    let paroleTagliate = parole[i].slice(1);
+    let ParolaFinale = PrimaLetteraGrande + paroleTagliate;
+    stringaFinale.push(ParolaFinale);
+  }
+  return stringaFinale.join(" ");
+}
+
+console.log(`Esercizio 8:`, upperFirst("ciao sono alessandro"));
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
  della stringa originale.
@@ -143,3 +157,11 @@ console.log(`Esercizio 9: risultato di ${stringa} è `, cutString(stringa));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+function giveMeRandom(n) {
+  const arr = [];
+  for (let i = 0; i < n; i++) {
+    arr.push(Math.floor(Math.random() * 10));
+  }
+  return arr;
+}
+console.log(`Esercizio 10:`, giveMeRandom(6));
